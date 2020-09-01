@@ -16,4 +16,5 @@ It is a small app that adds, crosses out the finished task and removes tasks🌐
 ![Captura de pantalla (225)](https://user-images.githubusercontent.com/46753453/91793189-b7f37000-ebd4-11ea-911b-94d81c3ea883.png)
 ![Captura de pantalla (226)](https://user-images.githubusercontent.com/46753453/91793191-b9bd3380-ebd4-11ea-91c1-f3ca267dabda.png)
 ![Captura de pantalla (227)](https://user-images.githubusercontent.com/46753453/91793193-ba55ca00-ebd4-11ea-87da-fe26eab98f00.png)
-![Uploading Captura de pantalla (228).png…]()
+![Captura de pantalla (228)](https://user-images.githubusercontent.com/46753453/91793194-baee6080-ebd4-11ea-802b-1aa56036629a.png)
+
