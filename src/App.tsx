@@ -12,7 +12,7 @@ function App(): JSX.Element {
   const [newTask, setNewTask] = useState<string>('');
   const [tasks, setTasks] = useState<ITask[]>([]);
 
-  const handleSubmit = (e: FormElement ) => {
+  const handleSubmit = (e: FormElement) => {
     e.preventDefault();
     addTask(newTask);
     setNewTask('');
@@ -22,25 +22,39 @@ function App(): JSX.Element {
     setTasks(newTasks)
   }
   return (
-    <Fragment>
-      <form onSubmit={handleSubmit}>
-        <input
-              type="text"
-              onChange={e => setNewTask(e.target.value)}
-              value={newTask}
-        />
-        
-        <button>
-          Save
-        </button>
-      </form>
-      {
-        tasks.map((t: ITask, i: number) => {
-          return <h1 key={i}>{t.name}</h1>
-        })
-      }
-    </Fragment>
-   
+    <div className="container p-4">
+      <div className="row">
+        <div className="col-md-6 offset-md-3">
+          <div className="card">
+            <div className="card-body">
+              <form onSubmit={handleSubmit}>
+                <input className="form-control "
+                  type="text"
+                  onChange={e => setNewTask(e.target.value)}
+                  value={newTask}
+                  autoFocus
+                />
+
+                <button className="btn btn-success btn-block mt-2">
+                  Save
+                </button>
+              </form>
+            </div>
+
+          </div>
+
+          {
+            tasks.map((t: ITask, i: number) => (
+              <div className="card card-body mt-2" key={i}>
+                <h2 style={{textDecoration: 'line-through'}}>{t.name}</h2>
+              </div>
+
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
   );
 }
 
