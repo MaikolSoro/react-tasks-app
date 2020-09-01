@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 
 
 type FormElement = React.FormEvent<HTMLFormElement>;
@@ -17,9 +17,23 @@ function App(): JSX.Element {
     addTask(newTask);
     setNewTask('');
   }
-  const addTask = (name: string) => {
+  const addTask = (name: string): void => {
     const newTasks: ITask[] = [...tasks, { name, done: false }];
     setTasks(newTasks)
+  }
+
+ const toogleDoneTask = (i: number): void =>{
+   const newTasks: ITask[] = [...tasks];
+   newTasks[i].done = !newTasks[i].done;
+
+   setTasks(newTasks);
+ }
+  
+  const removeTask = (i:number): void => {
+    console.log(i);
+    const newTasks: ITask[] = [...tasks];
+    newTasks.splice(i, 1);
+    setTasks(newTasks);
   }
   return (
     <div className="container p-4">
@@ -46,9 +60,19 @@ function App(): JSX.Element {
           {
             tasks.map((t: ITask, i: number) => (
               <div className="card card-body mt-2" key={i}>
-                <h2 style={{textDecoration: 'line-through'}}>{t.name}</h2>
+                <h2 style={{ textDecoration: t.done ? 'line-through' : '' }}>{t.name}</h2>
+                <div>
+                  <button
+                    className="btn btn-secondary"
+                    onClick={() => toogleDoneTask(i)}
+                  >
+                    {t.done ? '✓' : '✗'}
+                  </button>
+                  <button className="btn btn-danger" onClick={() => removeTask(i)}>
+                  🗑
+                  </button>
+                </div>
               </div>
-
             ))
           }
         </div>
