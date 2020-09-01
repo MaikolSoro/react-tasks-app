@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 
 type FormElement = React.FormEvent<HTMLFormElement>;
@@ -11,11 +11,14 @@ function App(): JSX.Element {
 
   const [newTask, setNewTask] = useState<string>('');
   const [tasks, setTasks] = useState<ITask[]>([]);
+  const taskInput = useRef<HTMLInputElement>(null);
+
 
   const handleSubmit = (e: FormElement) => {
     e.preventDefault();
     addTask(newTask);
     setNewTask('');
+    taskInput.current?.focus();
   }
   const addTask = (name: string): void => {
     const newTasks: ITask[] = [...tasks, { name, done: false }];
@@ -46,6 +49,7 @@ function App(): JSX.Element {
                   type="text"
                   onChange={e => setNewTask(e.target.value)}
                   value={newTask}
+                  ref={taskInput}
                   autoFocus
                 />
 
