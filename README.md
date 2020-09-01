@@ -1,6 +1,13 @@
 ## Tasks-App
 It is a small app that adds, crosses out the finished task and removes tasks🌐📝✔
+
+## ✔ Technologies
+- [ReactJS Documentation](https://es.reactjs.org/)
+- [Typescript Documentation](https://www.typescriptlang.org/)
+- [Bootswatch](https://bootswatch.com/help/)
+
 ## 🚀 Installation
+
    ## Prerequisites
  
    - Have yarn installed
