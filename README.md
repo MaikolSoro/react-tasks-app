@@ -1,5 +1,5 @@
 ## Tasks-App
-
+It is a small app that adds, crosses out the finished task and removes tasks🌐📝✔
 ## 🚀 Installation
    ## Prerequisites
  
