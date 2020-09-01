@@ -34,6 +34,11 @@ function App(): JSX.Element {
           Save
         </button>
       </form>
+      {
+        tasks.map((t: ITask, i: number) => {
+          return <h1 key={i}>{t.name}</h1>
+        })
+      }
     </Fragment>
    
   );
