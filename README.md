@@ -20,6 +20,7 @@ It is a small app that adds, crosses out the finished task and removes tasks🌐
   - Run ```yarn start ``` and navigate to ```http://localhost:3000/```
   
   ## 📷 Preview
+  ![GIF](https://user-images.githubusercontent.com/46753453/92195203-9f2fc800-ee29-11ea-964d-eb4ba7e85b7e.gif)
 ![Captura de pantalla (225)](https://user-images.githubusercontent.com/46753453/91793189-b7f37000-ebd4-11ea-911b-94d81c3ea883.png)
 ![Captura de pantalla (226)](https://user-images.githubusercontent.com/46753453/91793191-b9bd3380-ebd4-11ea-91c1-f3ca267dabda.png)
 ![Captura de pantalla (227)](https://user-images.githubusercontent.com/46753453/91793193-ba55ca00-ebd4-11ea-87da-fe26eab98f00.png)
